@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
-    /**
-     * Display a listing of the user's notes.
-     */
+
     public function index(Request $request)
     {
         $notes = $request->user()->notes()->orderBy('created_at', 'desc')->get();
